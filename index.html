@@ -41,12 +41,14 @@
             display: inline;
             padding: 0 20px 0 20px;
         }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
+      header #branding {
+    display: flex;
+    align-items: center;
+}
+
+header #branding h1 {
+    margin: 0 0 0 10px; /* Ajoute un peu d'espace entre le logo et le titre */
+}
         header nav {
             float: right;
             margin-top: 10px;
@@ -59,11 +61,14 @@
             color: #ffffff;
             font-weight: bold;
         }
-        footer {
+footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
@@ -79,8 +84,10 @@ footer a:hover {
 <body>
 <header>
     <div class="container">
-        <img src="antifaf_red.png" alt="Logo AntiFaScript" style="max-width: 100px;"/> <!-- Ajustez le chemin et la taille selon vos besoins -->
-        <h1><span class="highlight">AntiFaScript</span> - Lutte contre le Racisme</h1>
+        <div id="branding">
+            <img src="antifaf_red.png" alt="Logo AntiFaScript" style="max-width: 100px; vertical-align: middle;"/> 
+            <h1><span class="highlight">AntiFaScript</span> - Lutte contre le Racisme</h1>
+        </div>
     </div>
 </header>
 
